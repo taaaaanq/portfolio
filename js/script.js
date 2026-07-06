@@ -22,6 +22,8 @@ if (savedTheme) {
 
 // toggle theme
 toggleBtn.addEventListener("click", () => {
+  console.log("toggle clicked");
+  localStorage.setItem("theme", "test");
   if (document.body.classList.contains("dark")) {
     document.body.classList.replace("dark", "light");
     localStorage.setItem("theme", "light");
