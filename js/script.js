@@ -7,3 +7,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+document.body.classList.add("dark");
+
+document.getElementById("themeToggle").addEventListener("click", () => {
+  document.body.classList.toggle("light");
+  document.body.classList.toggle("dark");
+});
