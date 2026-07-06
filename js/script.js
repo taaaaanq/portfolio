@@ -8,9 +8,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-document.body.classList.add("dark");
+const toggleBtn = document.getElementById("themeToggle");
 
-document.getElementById("themeToggle").addEventListener("click", () => {
-  document.body.classList.toggle("light");
-  document.body.classList.toggle("dark");
+// load saved theme
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme) {
+  document.body.className = savedTheme;
+  toggleBtn.textContent = savedTheme === "light" ? "☀️" : "🌙";
+} else {
+  document.body.classList.add("dark");
+}
+
+// toggle theme
+toggleBtn.addEventListener("click", () => {
+  if (document.body.classList.contains("dark")) {
+    document.body.classList.replace("dark", "light");
+    localStorage.setItem("theme", "light");
+    toggleBtn.textContent = "☀️";
+  } else {
+    document.body.classList.replace("light", "dark");
+    localStorage.setItem("theme", "dark");
+    toggleBtn.textContent = "🌙";
+  }
 });

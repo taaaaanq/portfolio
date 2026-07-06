@@ -30,7 +30,13 @@ body.dark {
 }
 
 body.light {
-  --bg-gradient: linear-gradient(-45deg, #e6eef5, #dfe9f3, #e8f2ec, #e9eef5);
+  --bg-gradient: linear-gradient(
+  -45deg,
+  #e0f2ff,
+  #f3e8ff,
+  #e8fff3,
+  #fff6e5
+);
   --bg-anim-duration: 10s;
   --text-color: #111111;
   --accent: #008b75;
@@ -44,7 +50,7 @@ body.light {
   --toggle-bg: #007a66;
   --toggle-text: #ffffff;
   --toggle-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  --nav-bg: rgba(255, 255, 255, 0.6);
+  --nav-bg: rgba(255, 255, 255, 0.25);
   --nav-border: rgba(0, 0, 0, 0.08);
   --nav-links-bg: rgba(0, 0, 0, 0.04);
 }
