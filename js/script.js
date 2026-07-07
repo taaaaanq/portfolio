@@ -32,3 +32,43 @@ toggleBtn.addEventListener("click", () => {
     toggleBtn.textContent = "🌙";
   }
 });
+
+const cards = document.querySelectorAll(".project-card");
+
+const modal = document.getElementById("projectModal");
+
+cards.forEach(card=>{
+
+    card.addEventListener("click",()=>{
+
+        document.getElementById("modalTitle").innerText =
+        card.dataset.title;
+
+        document.getElementById("modalDesc").innerText =
+        card.dataset.desc;
+
+        document.getElementById("modalTech").innerText =
+        card.dataset.tech;
+
+        document.getElementById("modalImage").src =
+        card.dataset.image;
+
+        modal.classList.add("show");
+
+    });
+
+});
+
+document.querySelector(".close").onclick=()=>{
+
+    modal.classList.remove("show");
+
+}
+
+window.onclick=(e)=>{
+
+    if(e.target===modal)
+
+        modal.classList.remove("show");
+
+}

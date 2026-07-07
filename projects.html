@@ -1,65 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
 
-  <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="dark">
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
+<nav class="navbar">
     <div class="logo">MyPortfolio</div>
 
     <div class="nav-links">
-      <a href="./index.html">Home</a>
-      <a href="./about.html">About</a>
-      <a href="./projects.html">Projects</a>
-      <a href="./skills.html">Skills</a>
-      <a href="./contact.html">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
     </div>
-  </nav>
+</nav>
 
-  <!-- PROJECTS -->
-  <section class="page">
-    <div class="container">
+<section class="projects-page">
 
-      <h1>My Projects</h1>
+    <h1>Projects</h1>
+    <p>Click a project to view more details.</p>
 
-      <div class="grid">
+    <div class="project-grid">
 
-        <!-- PROJECT 1 -->
-        <div class="card">
-          <img src="assets/images/pos.png" alt="POS System" class="project-img">
-          <h3>POS System</h3>
-          <p>Retail system with product management, checkout, and inventory control.</p>
+        <div class="project-card"
+            data-title="POS System"
+            data-image="assets/images/pos.png"
+            data-desc="A full stack retail POS system with inventory management and checkout."
+            data-tech="HTML • CSS • JavaScript • Node.js • Express • MySQL">
+
+            <img src="assets/images/pos.png">
+
+            <div class="project-info">
+                <h3>POS System</h3>
+                <p>Retail Store Management</p>
+            </div>
+
         </div>
 
-        <!-- PROJECT 2 -->
-        <div class="card">
-          <img src="assets/images/gold.png" alt="Gold Tracker" class="project-img">
-          <h3>Gold Price Tracker</h3>
-          <p>24/7 Linux system that fetches real-time gold prices and visualizes trends.</p>
+        <div class="project-card"
+            data-title="Gold Price Tracker"
+            data-image="assets/images/gold.png"
+            data-desc="Linux mini-computer that tracks gold prices 24/7."
+            data-tech="Linux • Python • Cron">
+
+            <img src="assets/images/gold.png">
+
+            <div class="project-info">
+                <h3>Gold Price Tracker</h3>
+                <p>Embedded Linux Project</p>
+            </div>
+
         </div>
 
-        <!-- PROJECT 3 -->
-        <div class="card">
-          <img src="assets/images/chess.png" alt="Chess AI" class="project-img">
-          <h3>Chess AI Agent</h3>
-          <p>AI chess engine using Minimax + Alpha-Beta pruning strategy.</p>
-        </div>
+        <div class="project-card"
+            data-title="Chess AI"
+            data-image="assets/images/chess.png"
+            data-desc="Chess AI using Minimax and Alpha Beta pruning."
+            data-tech="Java • AI">
 
-      </div>
+            <img src="assets/images/chess.jpg">
+
+            <div class="project-info">
+                <h3>Chess AI</h3>
+                <p>Artificial Intelligence</p>
+            </div>
+
+        </div>
 
     </div>
-  </section>
 
-  <!-- THEME BUTTON -->
-  <button id="themeToggle">🌙</button>
+</section>
 
-  <script src="./js/script.js"></script>
+
+<!-- Modal -->
+
+<div class="modal" id="projectModal">
+  
+    <div class="modal-content">
+
+        <span class="close">&times;</span>
+
+        <img id="modalImage">
+
+        <h2 id="modalTitle"></h2>
+
+        <p id="modalTech"></p>
+
+        <p id="modalDesc"></p>
+
+        <div class="modal-buttons">
+            <a href="#">GitHub</a>
+            <a href="#">Live Demo</a>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- THEME BUTTON -->
+<button id="themeToggle">🌙</button>
+
+<footer>
+    <p>© 2026 Tan Qi Xian</p>
+</footer>
+
+<script src="./js/script.js"></script>
+
 </body>
 </html>
